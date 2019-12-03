@@ -52,10 +52,6 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-hr {
-  border: 1px solid #f3f3f3;
-}
-
 /*basic styles ends*/
 
 .main {
@@ -466,7 +462,7 @@ hr {
   code {
     font-family: 'Roboto Mono', Menlo, Monaco, courier, monospace;
     font-size: 0.9em;
-    background: #f8f8f8 !important;
+    background: #f8f8f8;
     border: none;
   }
 

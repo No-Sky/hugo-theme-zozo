@@ -8,7 +8,12 @@
       <div class="post animated fadeInDown">
         <div class="post_title post_detail_title">
           <h2><a href='{{ .RelPermalink }}'>{{ .Title }}</a></h2>
-          <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+          {{if .Date }}
+          <i class="remixicon-calendar-line"></i> <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+          {{ end }}
+          {{if .Params.author }}
+          <i class="remixicon-user-star-line"></i> <span class="author">{{ .Params.author }}</span>
+          {{ end }}
         </div>
         <div class="post_content markdown">{{ .Content }}</div>
         <div class="post_footer">

@@ -30,7 +30,7 @@ $ git clone https://github.com/imzeuk/hugo-theme-zozo themes/zozo
 
 ## 关于页面
 
-使用关于页面，首先要在你的站点目录的 [`content`](./exampleSite/content/) 目录下创建一个 [`about`](./exampleSite/content/about/) 目录，然后再创建一个 [`index.md`](./exampleSite/content/about/index.md) 文件，最后编写该文件即可。
+使用关于页面，首先要在你的站点目录的 [`content`](./exampleSite/content/) 目录下创建一个 [`about`](./exampleSite/content/about/) 目录，然后再创建一个 [`index.md`](./exampleSite/content/about/index.md) 文件，并在文件的 `frontmatter` 中添加  `hidden: true`, 最后编写该文件即可。
 
 ## Logo
 
@@ -42,13 +42,7 @@ $ git clone https://github.com/imzeuk/hugo-theme-zozo themes/zozo
 
 然后你可以在其他任何地方通过链接来引用该页面，如在菜单中放置一个链接。
 
-## Shortcodes
-
-主题提供了 `img` shortcode.
-
-```markdown
-{{< img src="path/to/xxx.png" title="xxx" >}}
-```
+关于页面就是这么实现的。
 
 ## Math 公式
 

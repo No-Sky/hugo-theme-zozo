@@ -34,14 +34,21 @@
 
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
 
-  <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}"/>
-  <link rel="stylesheet" href="{{ "css/animate.min.css" | absURL }}"/>
-  <link rel="stylesheet" href="{{ "css/remixicon.css" | absURL }}"/>
-  <link rel="stylesheet" href="{{ "css/zozo.css" |absURL }}"/>
-  <link rel="stylesheet" href="{{ "css/highlight.css" | absURL }}"/>
+  <link rel="shortcut icon" href="{{ "/images/favicon.ico" | absURL }}"/>
+  <link rel="stylesheet" href="{{ "/css/animate.min.css" | absURL }}"/>
+  <link rel="stylesheet" href="{{ "/css/remixicon.css" | absURL }}"/>
+  <link rel="stylesheet" href="{{ "/css/zozo.css" |absURL }}"/>
+  <link rel="stylesheet" href="{{ "/css/highlight.css" | absURL }}"/>
 
   <!-- custom css -->
   {{ range .Site.Params.customCSS }}
-  <link rel="stylesheet" href="{{ "css/" | absURL }}{{ . }}">
+  <link rel="stylesheet" href="{{ "/css/" | absURL }}{{ . }}">
   {{ end }}
+
+  {{ partial "js.html" . }}
+
+  <script>
+  console.log("\n %c 温故而知新 %c https://note.xiaofangwei.cn \n","color: #fadfa3; background: #030307; padding:5px 0;","background: #fadfa3; padding:5px 0;");
+</script>
+
 </head>
